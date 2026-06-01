@@ -1,11 +1,11 @@
 import PhoneFrame from '@/components/PhoneFrame'
-import SwipeCardStack from '@/components/SwipeCardStack'
+import AppShell from '@/components/AppShell'
 import { INITIAL_CARDS } from '@/data/cards'
 
 export default function Home() {
   return (
     <PhoneFrame>
-      <SwipeCardStack cards={INITIAL_CARDS} />
+      <AppShell cards={INITIAL_CARDS} />
     </PhoneFrame>
   )
 }

@@ -10,12 +10,12 @@ export default function PhoneFrame({ children, frameImageSrc }: Props) {
   return (
     // スマホ: fixed inset-0 でビューポート全体を占有しスクロール不可
     // PC (sm以上): スレート背景の中央にスマホフレームとして表示
-    <div className="fixed inset-0 overflow-hidden sm:relative sm:inset-auto sm:overflow-auto sm:min-h-screen sm:bg-slate-300 sm:flex sm:items-center sm:justify-center sm:p-8" style={{ touchAction: 'none' }}>
-      <div className="relative w-full h-full flex flex-col sm:h-auto sm:max-w-97.5 sm:shadow-2xl sm:shadow-black/40">
+    <div className="fixed inset-0 overflow-hidden sm:relative sm:inset-auto sm:overflow-auto sm:h-screen sm:bg-slate-300 sm:flex sm:items-center sm:justify-center sm:p-8" style={{ touchAction: 'none' }}>
+      <div className="relative w-full h-full flex flex-col  sm:max-w-97.5">
 
         {/* スクリーン領域 */}
         <div
-          className="relative flex-1 flex flex-col overflow-hidden bg-gray-100 sm:flex-none sm:rounded-[3rem] sm:aspect-390/844"
+          className="h-full relative flex-1 flex flex-col overflow-hidden bg-gray-100 sm:flex-none sm:rounded-[3rem] sm:aspect-390/844"
           style={{
             // スマホのノッチ・ダイナミックアイランド・ホームバーを考慮
             paddingTop: 'env(safe-area-inset-top)',
