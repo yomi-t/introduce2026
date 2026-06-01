@@ -120,7 +120,7 @@ export default function ChatView({ messages, setMessages }: Props) {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && e.metaKey && send()}
           placeholder="メッセージを送る..."
-          className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm outline-none placeholder:text-gray-400 text-black"
+          className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-base outline-none placeholder:text-gray-400 text-black"
         />
         <button
           onClick={send}
