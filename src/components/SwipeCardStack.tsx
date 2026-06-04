@@ -5,6 +5,7 @@ import { Bell, X, Heart, Star } from 'lucide-react'
 import SwipeCard, { type SwipeCardHandle } from './SwipeCard'
 import NotificationPanel from './NotificationPanel'
 import type { CardData } from '@/data/cards'
+import Image from 'next/image'
 
 type CardInstance = CardData & { instanceKey: number }
 
@@ -86,7 +87,10 @@ export default function SwipeCardStack({ cards }: Props) {
 
       {/* ヘッダー */}
       <div className="flex shrink-0 items-center justify-between px-5 py-3">
-        <h1 className="text-xl font-bold text-pink-500">About Taiga</h1>
+        <div className='flex'>
+          <Image src='/logo.png' alt='Tinger logo' width={24} height={24} className='w-6 h-6 mr-2' />
+          <h1 className="text-xl font-bold text-pink-500">Tinger</h1>
+        </div>
         <button
           onClick={() => setIsNotifOpen(true)}
           className="w-9 h-9 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-200 transition-colors"
